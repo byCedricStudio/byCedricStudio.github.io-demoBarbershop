@@ -254,7 +254,9 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 100dvh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #1C1917 0%, #292524 50%, #1C1917 100%);
+  background:
+    linear-gradient(135deg, rgba(28, 25, 23, 0.85) 0%, rgba(41, 37, 36, 0.8) 50%, rgba(28, 25, 23, 0.9) 100%),
+    url('https://images.unsplash.com/photo-1585747860019-8e41b4bed86f?w=1920&q=80&auto=format') center/cover no-repeat;
   overflow: hidden;
 }
 
@@ -263,8 +265,8 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(161, 98, 7, 0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(161, 98, 7, 0.05) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 50%, rgba(161, 98, 7, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(161, 98, 7, 0.08) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -404,8 +406,30 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 32px 28px;
+  padding: 0;
+  overflow: hidden;
   transition: all 300ms ease;
+}
+
+.service-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-card .service-name,
+.service-card .service-desc,
+.service-card .service-price {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.service-card .service-name {
+  padding-top: 24px;
+}
+
+.service-card .service-price {
+  padding-bottom: 28px;
 }
 
 .service-card:hover {
@@ -533,7 +557,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- CTA Banner --- */
 .section-cta-banner {
-  background: linear-gradient(135deg, #1C1917 0%, #292524 100%);
+  background:
+    linear-gradient(135deg, rgba(28, 25, 23, 0.9) 0%, rgba(41, 37, 36, 0.88) 100%),
+    url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1920&q=80&auto=format') center/cover no-repeat;
   padding: 80px 0;
   text-align: center;
 }
@@ -561,7 +587,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Page Header --- */
 .page-header {
-  background: linear-gradient(135deg, #1C1917 0%, #292524 100%);
+  background:
+    linear-gradient(135deg, rgba(28, 25, 23, 0.88) 0%, rgba(41, 37, 36, 0.85) 100%),
+    url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1920&q=80&auto=format') center/cover no-repeat;
   padding: 140px 0 80px;
   text-align: center;
 }
@@ -740,6 +768,13 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
+.story-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
 .story-image-placeholder {
   aspect-ratio: 4 / 5;
   background: linear-gradient(135deg, #292524, #1C1917);
@@ -790,6 +825,15 @@ h1, h2, h3, h4, h5, h6 {
 .team-card {
   text-align: center;
   padding: 40px 24px;
+}
+
+.team-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  border: 3px solid rgba(161, 98, 7, 0.2);
 }
 
 .team-avatar {
@@ -1039,6 +1083,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .story-image {
     order: -1;
+  }
+
+  .story-img {
+    aspect-ratio: 16 / 9;
   }
 
   .story-image-placeholder {
