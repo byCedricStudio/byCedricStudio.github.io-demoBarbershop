@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.gentlemanscut.com/sitemap.xml
+Sitemap: https://bycedricstudio.github.io/byCedricStudio.github.io-demoBarbershop/sitemap.xml
