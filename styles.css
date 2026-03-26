@@ -1071,6 +1071,19 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255, 255, 255, 0.35);
 }
 
+.footer-credit {
+  margin-top: 8px;
+}
+
+.footer-credit a {
+  color: rgba(255, 255, 255, 0.5);
+  transition: color var(--transition);
+}
+
+.footer-credit a:hover {
+  color: #FFFFFF;
+}
+
 /* ============================================
    RESPONSIVE
    ============================================ */
